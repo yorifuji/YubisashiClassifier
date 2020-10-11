@@ -16,6 +16,10 @@
 		E349F0E8252DC0CC00E001B1 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E349F0E7252DC0CC00E001B1 /* NotificationController.swift */; };
 		E349F0EA252DC0CC00E001B1 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E349F0E9252DC0CC00E001B1 /* ComplicationController.swift */; };
 		E349F0EC252DC0CD00E001B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E349F0EB252DC0CD00E001B1 /* Assets.xcassets */; };
+		E349F10A252DC22900E001B1 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E349F109252DC22900E001B1 /* HealthKit.framework */; };
+		E349F144252DC43F00E001B1 /* yoshi.png in Resources */ = {isa = PBXBuildFile; fileRef = E349F143252DC43F00E001B1 /* yoshi.png */; };
+		E349F149252DC5E400E001B1 /* YubisashiMotionClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E349F148252DC5E400E001B1 /* YubisashiMotionClassifier.swift */; };
+		E34B360C253203050060C467 /* YubisashiClassifier 30.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E34B360B253203050060C467 /* YubisashiClassifier 30.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +78,11 @@
 		E349F0EB252DC0CD00E001B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E349F0ED252DC0CD00E001B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E349F0EE252DC0CD00E001B1 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		E349F107252DC22900E001B1 /* YubisashiClassifier WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "YubisashiClassifier WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		E349F109252DC22900E001B1 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.0.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		E349F143252DC43F00E001B1 /* yoshi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yoshi.png; sourceTree = "<group>"; };
+		E349F148252DC5E400E001B1 /* YubisashiMotionClassifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YubisashiMotionClassifier.swift; sourceTree = "<group>"; };
+		E34B360B253203050060C467 /* YubisashiClassifier 30.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "YubisashiClassifier 30.mlmodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E349F10A252DC22900E001B1 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +103,7 @@
 				E349F0D3252DC0CC00E001B1 /* YubisashiClassifier WatchKit App */,
 				E349F0E2252DC0CC00E001B1 /* YubisashiClassifier WatchKit Extension */,
 				E349F0CC252DC0CB00E001B1 /* Products */,
+				E349F108252DC22900E001B1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +120,7 @@
 		E349F0D3252DC0CC00E001B1 /* YubisashiClassifier WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
+				E349F143252DC43F00E001B1 /* yoshi.png */,
 				E349F0D4252DC0CC00E001B1 /* Interface.storyboard */,
 				E349F0D7252DC0CC00E001B1 /* Assets.xcassets */,
 				E349F0D9252DC0CC00E001B1 /* Info.plist */,
@@ -119,6 +131,9 @@
 		E349F0E2252DC0CC00E001B1 /* YubisashiClassifier WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				E34B360B253203050060C467 /* YubisashiClassifier 30.mlmodel */,
+				E349F148252DC5E400E001B1 /* YubisashiMotionClassifier.swift */,
+				E349F107252DC22900E001B1 /* YubisashiClassifier WatchKit Extension.entitlements */,
 				E349F0E3252DC0CC00E001B1 /* InterfaceController.swift */,
 				E349F0E5252DC0CC00E001B1 /* ExtensionDelegate.swift */,
 				E349F0E7252DC0CC00E001B1 /* NotificationController.swift */,
@@ -128,6 +143,14 @@
 				E349F0EE252DC0CD00E001B1 /* PushNotificationPayload.apns */,
 			);
 			path = "YubisashiClassifier WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		E349F108252DC22900E001B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E349F109252DC22900E001B1 /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E349F144252DC43F00E001B1 /* yoshi.png in Resources */,
 				E349F0D8252DC0CC00E001B1 /* Assets.xcassets in Resources */,
 				E349F0D6252DC0CC00E001B1 /* Interface.storyboard in Resources */,
 			);
@@ -256,6 +280,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E349F149252DC5E400E001B1 /* YubisashiMotionClassifier.swift in Sources */,
+				E34B360C253203050060C467 /* YubisashiClassifier 30.mlmodel in Sources */,
 				E349F0E8252DC0CC00E001B1 /* NotificationController.swift in Sources */,
 				E349F0EA252DC0CC00E001B1 /* ComplicationController.swift in Sources */,
 				E349F0E6252DC0CC00E001B1 /* ExtensionDelegate.swift in Sources */,
@@ -408,6 +434,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "YubisashiClassifier WatchKit Extension/YubisashiClassifier WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5QJR7K89TS;
 				INFOPLIST_FILE = "YubisashiClassifier WatchKit Extension/Info.plist";
@@ -430,6 +457,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "YubisashiClassifier WatchKit Extension/YubisashiClassifier WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5QJR7K89TS;
 				INFOPLIST_FILE = "YubisashiClassifier WatchKit Extension/Info.plist";
